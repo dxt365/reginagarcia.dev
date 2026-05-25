@@ -1,12 +1,12 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+  title: "Regina Garcia — Engineering Manager",
+  author: "Regina Garcia",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Engineering Manager based in the SF Bay Area. I specialize in UI design, web and mobile application development and maintenance.",
   lang: "en",
-  siteLogo: "/alejandro-small.jpg",
+  siteLogo: "/reginagarcia-small.jpg",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
@@ -25,47 +25,52 @@ export const SITE_CONFIG: SiteConfig = {
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
+    name: "Regina Garcia",
+    specialty: "Engineering Manager",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "Engineering leader with over a decade building products at Apple and Intuit. Beyond the roadmap, I care about the people, the craft, and shipping things that actually hold up.",
+    email: "mariaregina.garcia@gmail.com",
   },
   experience: [
     {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
+      company: "Intuit",
+      position: "Senior Engineering Manager",
+      startDate: "May 2025",
+      endDate: "Present",
       summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
+        "Leading 13 engineers across two concurrent product lines, from roadmap definition to general availability.",
+        "Championing AI-augmented engineering practices — Cursor, MCP, and Claude Code — as a cultural shift that's raised team velocity without sacrificing code quality",
+        "Delivering agentic workflows for transaction categorization and invoice generation, reducing manual work for millions of QuickBooks users.",
       ],
     },
     {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
+      company: "Apple",
+      position: "Engineering Lead",
+      startDate: "Sept 2020",
+      endDate: "May 2025",
       summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
+        "Built and scaled a Search platform from early adopter to org-wide infrastructure, adopted by 8+ business units including Apple Support, Apple TV, and Beats.",
+        "Led UI engineering for two internal LLM-powered platforms — one for decision-making workflows, one tracking customer sentiment around product launches.",
+        "Drove self-service onboarding tooling that eliminated ad-hoc production changes and accelerated launch cycles.",
       ],
     },
     {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
-      summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
+      company: "Intuit",
+      position: "Senior Software Engineer",
+      startDate: "Jan 2019",
+      endDate: "September 2020",
+      summary: [
+        "Built the Knowledge Engine platform from scratch into a self-service tool that let non-technical teams deploy intelligent guided experiences — earning two patents.",
+        "Launched Intuit Aid Assist during the CARES Act rollout, helping thousands of small businesses access emergency funding under tight deadline pressure.",
+        "Improved QuickBooks France first-time-use conversion by 51%, directly accelerating international market entry.",
+      ],
     },
   ],
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
+      name: "QuickBooks Business Feed",
+      summary:
+        "A business feed feature within QuickBooks that provides real-time updates and insights.",
       linkPreview: "/",
       linkSource: "https://github.com/immois/astro-zen",
       image: "/spotifu.png",
@@ -87,11 +92,11 @@ export const SITE_CONTENT: SiteContent = {
   ],
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
+      Hi, I’m Regina Garcia, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
 
       Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
     `,
-    image: "/alejandro-big.jpg",
+    image: "/reginagarcia-big.jpg",
   },
 };
 

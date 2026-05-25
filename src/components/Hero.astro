@@ -20,8 +20,19 @@ const { name, specialty, summary, email } = Astro.props;
     {summary}
   </p>
 
-  <a
-    class="inline-block rounded-full bg-primary px-8 py-5 text-sm leading-5 font-medium text-[#fff]"
-    href={`mailto:${email}`}>Get in Touch</a
-  >
+  <div class="mb-16 flex flex-wrap gap-4">
+    <a
+      href="https://www.linkedin.com/in/regina-garcia"
+      class="border-neutral-00 inline-flex items-center gap-1.5 rounded-lg border bg-white px-4 py-2 text-sm font-medium text-neutral-900 no-underline transition-colors hover:bg-neutral-100"
+    >
+      LinkedIn
+    </a>
+
+    <a
+      href={`mailto:${email}`}
+      class="transition-color inline-flex items-center gap-1.5 rounded-lg border border-none bg-primary px-4 py-2 text-sm font-medium text-[#fff] no-underline hover:bg-primary/90"
+    >
+      Get in touch
+    </a>
+  </div>
 </section>
