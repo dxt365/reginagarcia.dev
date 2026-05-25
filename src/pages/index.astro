@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../data/site';
+---
+
+<BaseLayout title={`${siteConfig.name} | Portfolio`}>
+  <header class="header">
+    <h1>{siteConfig.name}</h1>
+    <p>{siteConfig.title}</p>
+    <p>{siteConfig.bio}</p>
+    <div class="meta">
+      <span>📍 {siteConfig.location}</span>
+      <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+      {
+        siteConfig.social.map((item) => (
+          <a href={item.href} target="_blank" rel="noreferrer">{item.label}</a>
+        ))
+      }
+    </div>
+  </header>
+
+  <section>
+    <h2>Selected Projects</h2>
+    <div class="grid">
+      {
+        siteConfig.projects.map((project) => (
+          <article class="card">
+            <h3>
+              <a href={project.href}>{project.name}</a>
+            </h3>
+            <p>{project.description}</p>
+            <div class="tags">
+              {project.stack.map((tool) => <span class="tag">{tool}</span>)}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="grid">
+      {
+        siteConfig.experience.map((item) => (
+          <article class="card">
+            <h3>{item.role}</h3>
+            <small>
+              {item.company} · {item.period}
+            </small>
+            <p>{item.details}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <footer>
+    <p>© {new Date().getFullYear()} {siteConfig.name}. Built with Astro.</p>
+  </footer>
+</BaseLayout>
