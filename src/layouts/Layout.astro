@@ -17,6 +17,21 @@ const {
 } = SITE_CONFIG;
 
 const ogImgUrl = canonicalURL + socialImage;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: author,
+  jobTitle: "Senior Engineering Manager",
+  description,
+  url: canonicalURL,
+  image: ogImgUrl,
+  sameAs: ["https://www.linkedin.com/in/regina-garcia"],
+  worksFor: {
+    "@type": "Organization",
+    name: "Intuit",
+  },
+};
 ---
 
 <!doctype html>
@@ -27,12 +42,15 @@ const ogImgUrl = canonicalURL + socialImage;
     <meta name="author" content={author} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
     <Font cssVariable="--font-gabarito" preload />
     <Font cssVariable="--font-be-vietnam-pro" preload />
 
+    <meta property="og:type" content="profile" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
@@ -43,6 +61,12 @@ const ogImgUrl = canonicalURL + socialImage;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImgUrl} />
+
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd)}
+    />
   </head>
   <body class="bg-black font-sans">
     <Header siteLogo={siteLogo} navLinks={navLinks} />

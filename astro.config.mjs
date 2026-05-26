@@ -2,9 +2,12 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import { fontProviders } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://reginagarcia.dev",
+  integrations: [sitemap()],
   fonts: [
     {
       provider: fontProviders.fontsource(),

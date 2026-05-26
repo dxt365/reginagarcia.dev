@@ -57,6 +57,17 @@ const { siteLogo, navLinks } = Astro.props;
   const button = document.querySelector("#menu-button");
   const menu = document.querySelector("#main-menu");
   const navItems = document.querySelectorAll("#main-menu > ul > li > a");
+  const sections = Array.from(document.querySelectorAll("section[id]"));
+
+  const setActiveNavItem = (sectionId: string) => {
+    navItems.forEach((item) => {
+      if (item.getAttribute("href") === `#${sectionId}`) {
+        item.classList.add("text-white", "md:after:opacity-100");
+      } else {
+        item.classList.remove("text-white", "md:after:opacity-100");
+      }
+    });
+  };
 
   const toggleMenu = () => {
     menu?.classList.toggle("hidden");
@@ -69,34 +80,46 @@ const { siteLogo, navLinks } = Astro.props;
     item?.addEventListener("click", toggleMenu);
   });
 
-  // Update navigation based on scroll position with Intersection Observer
+  // Track the section closest to the viewport center so tall sections are handled correctly.
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("href") === `#${entry.target.id}`) {
-              item.classList.add("text-white", "md:after:opacity-100");
-            } else {
-              item.classList.remove("text-white", "md:after:opacity-100");
-            }
-          });
+          setActiveNavItem(entry.target.id);
         }
       });
     },
-    { threshold: 0.5 },
+    {
+      threshold: 0,
+      rootMargin: "-45% 0px -45% 0px",
+    },
   );
 
-  document.querySelectorAll("section").forEach((section) => {
+  sections.forEach((section) => {
     observer.observe(section);
   });
+
+  // Set initial active section on load.
+  if (sections.length > 0) {
+    const activeSection = sections.find((section) => {
+      const rect = section.getBoundingClientRect();
+      return (
+        rect.top <= window.innerHeight * 0.45 &&
+        rect.bottom >= window.innerHeight * 0.45
+      );
+    });
+
+    if (activeSection) {
+      setActiveNavItem(activeSection.id);
+    }
+  }
 
   // Cleanup observer
   document.onvisibilitychange = () => {
     if (document.visibilityState === "hidden") {
       observer.disconnect();
     } else {
-      document.querySelectorAll("section").forEach((section) => {
+      sections.forEach((section) => {
         observer.observe(section);
       });
     }
