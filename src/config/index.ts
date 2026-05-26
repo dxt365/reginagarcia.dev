@@ -26,7 +26,7 @@ export const SITE_CONTENT: SiteContent = {
     specialty: "Engineering Leader",
     summary:
       "Engineering leader with experience building and shipping products at Apple and Intuit — driving full engineering cycles from roadmap to general availability, with a strong background in AI-augmented workflows, LLM integration, and platform engineering.",
-    email: "mariaregina.garcia@gmail.com",
+    email: "reginagarcia.dev@gmail.com",
   },
   experience: [
     {

@@ -3,6 +3,7 @@ import type { HeroProps } from "@types";
 type Props = HeroProps;
 
 const { name, specialty, summary, email } = Astro.props;
+const emailSubject = encodeURIComponent("Get In Touch");
 ---
 
 <section class="py-24 md:py-32" id="hero">
@@ -29,9 +30,22 @@ const { name, specialty, summary, email } = Astro.props;
     </a>
 
     <a
-      href={`mailto:${email}`}
+      href={`mailto:${email}?subject=${emailSubject}`}
       class="transition-color inline-flex items-center gap-1.5 rounded-lg border border-none bg-primary px-4 py-2 text-sm font-medium text-[#fff] no-underline hover:bg-primary/90"
     >
+      <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
+        <path
+          d="M4 7h16v10H4z"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linejoin="round"></path>
+        <path
+          d="m4 8 8 6 8-6"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
       Get in touch
     </a>
   </div>
