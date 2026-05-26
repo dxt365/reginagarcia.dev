@@ -6,7 +6,7 @@ export const SITE_CONFIG: SiteConfig = {
   description:
     "Engineering Leader who shipped products at Apple and Intuit, shipping AI-powered products and leading high-performing teams in the SF Bay Area.",
   lang: "en",
-  siteLogo: "/reginagarcia-small.jpg",
+  siteLogo: "/avatar3.png",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
