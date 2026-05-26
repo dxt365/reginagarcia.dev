@@ -26,7 +26,8 @@ const { projects } = Astro.props;
               </h3>
               <p class="text-base text-neutral">{summary}</p>
               <div class="flex gap-5 pt-10 text-white">
-                <a
+                {linkSource && (
+                  <a
                   href={linkSource}
                   target="_blank"
                   class="after:relative after:-bottom-1.25 after:content-[url(/external.svg)] hover:underline"
