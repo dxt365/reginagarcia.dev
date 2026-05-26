@@ -14,7 +14,7 @@ export const SITE_CONFIG: SiteConfig = {
     { text: "Patents & Credentials", href: "#skills" },
   ],
   socialLinks: [
-    // { text: "LinkedIn", href: "https://www.linkedin.com/in/regina-garcia" },
+    { text: "LinkedIn", href: "https://www.linkedin.com/in/regina-garcia" },
   ],
   socialImage: "/reginagarcia-big.jpg",
   canonicalURL: "https://reginagarcia.dev",
@@ -50,9 +50,10 @@ export const SITE_CONTENT: SiteContent = {
       logo: "/logos/apple.svg",
       location: "Sunnyvale, CA",
       summary: [
-        "Scaled a Search platform from early adopters to org-wide infrastructure across 8+ business units — Apple Support, Apple TV, Beats, and more.",
-        "Led UI engineering for Apple's earliest internal LLM tooling: a decision-making platform and a social signals platform with LLM-powered summarization.",
-        "Built self-service onboarding tooling that eliminated ad-hoc production changes and accelerated launch cycles.",
+        "Managed a team of engineers — providing technical direction, delivery oversight, and performance feedback, and participating in hiring panels.",
+        "Built and scaled a Search platform from a handful of early adopters to org-wide infrastructure across 8+ business units — including Apple Retail Store, Apple Support and Apple TV.",
+        "Led UI engineering for two internal LLM-powered platforms: a decision-making tool enabling teams to query private data sources, and a social signals platform with real-time, LLM-summarized customer sentiment around product launches.",
+        "Drove self-service onboarding tooling that eliminated ad-hoc production changes and accelerated launch cycles — and built a reusable UI component adopted by Finance and PeopleWeb.",
       ],
     },
     {
@@ -145,21 +146,21 @@ export const SITE_CONTENT: SiteContent = {
       name: "Apple Search Platform",
       summary:
         "Search platform adopted by 8+ Apple business units — from early adopters to org-wide infrastructure used by Apple Support, Apple TV, and Beats.",
-      linkSource: "https://www.apple.com/",
+      // linkSource: "https://www.apple.com/",
       image: "/apple.jpg",
     },
     {
       name: "Apple Gen AI Platform",
       summary:
         "Internal LLM platform enabling teams to query private data sources and accelerate decision-making workflows at scale.",
-      linkSource: "https://www.apple.com/",
+      // linkSource: "https://www.apple.com/",
       image: "/apple.jpg",
     },
     {
       name: "Apple Social",
       summary:
         "Social media signals platform giving employees real-time, LLM-summarized visibility into customer sentiment around product launches.",
-      linkSource: "https://www.apple.com/",
+      // linkSource: "https://www.apple.com/",
       image: "/apple.jpg",
     },
     {

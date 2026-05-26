@@ -3,7 +3,7 @@ import type { HeroProps } from "@types";
 type Props = HeroProps;
 
 const { name, specialty, summary, email } = Astro.props;
-const emailSubject = encodeURIComponent("Get In Touch");
+const emailSubject = encodeURIComponent("Let's build something great");
 ---
 
 <section class="py-24 md:py-32" id="hero">
@@ -21,32 +21,20 @@ const emailSubject = encodeURIComponent("Get In Touch");
     {summary}
   </p>
 
-  <div class="mb-16 flex flex-wrap gap-4">
-    <a
-      href="https://www.linkedin.com/in/regina-garcia"
-      class="border-neutral-00 inline-flex items-center gap-1.5 rounded-lg border bg-white px-4 py-2 text-sm font-medium text-neutral-900 no-underline transition-colors hover:bg-neutral-100"
-    >
-      LinkedIn
-    </a>
-
+  <div class="mb-16 flex flex-wrap items-center gap-4">
     <a
       href={`mailto:${email}?subject=${emailSubject}`}
-      class="transition-color inline-flex items-center gap-1.5 rounded-lg border border-none bg-primary px-4 py-2 text-sm font-medium text-[#fff] no-underline hover:bg-primary/90"
+      class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-medium text-white no-underline transition-colors hover:bg-primary/90"
     >
+      Let's build something great
       <svg viewBox="0 0 24 24" fill="none" class="h-4 w-4" aria-hidden="true">
         <path
-          d="M4 7h16v10H4z"
+          d="M5 12h14M13 6l6 6-6 6"
           stroke="currentColor"
-          stroke-width="1.7"
-          stroke-linejoin="round"></path>
-        <path
-          d="m4 8 8 6 8-6"
-          stroke="currentColor"
-          stroke-width="1.7"
+          stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"></path>
       </svg>
-      Get in touch
     </a>
   </div>
 </section>
